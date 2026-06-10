@@ -1,0 +1,52 @@
+
+<style>
+  .dash { padding: 1.5rem 0; font-family: var(--font-sans); }
+  .header { background: #F5A623; color: #4A2800; text-align: center; padding: 0.75rem 1rem; border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0; font-size: 16px; font-weight: 500; }
+  .panels { display: grid; grid-template-columns: 1fr 1fr; border: 0.5px solid var(--color-border-secondary); border-top: none; border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg); overflow: hidden; }
+  .panel { padding: 1rem 1.25rem; background: var(--color-background-primary); }
+  .panel:first-child { border-right: 0.5px solid var(--color-border-secondary); }
+  .panel-title { font-size: 13px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 1rem; }
+  .row { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .row:last-child { border-bottom: none; }
+  .label { font-size: 14px; color: var(--color-text-secondary); }
+  .value { font-size: 20px; font-weight: 500; color: var(--color-text-primary); }
+  .badge { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; padding: 3px 10px; border-radius: 999px; }
+  .badge-green { background: #EAF3DE; color: #3B6D11; }
+  .badge-amber { background: #FAEEDA; color: #854F0B; }
+  .badge-red { background: #FCEBEB; color: #A32D2D; }
+</style>
+<div class="dash">
+  <div class="header">SRM University — Andhra Pradesh</div>
+  <div class="panels">
+    <div class="panel">
+      <div class="panel-title">Overview</div>
+      <div class="row">
+        <span class="label">Total students</span>
+        <span class="value">1,572</span>
+      </div>
+      <div class="row">
+        <span class="label">Registered</span>
+        <span class="value">1,508</span>
+      </div>
+      <div class="row">
+        <span class="label">Unregistered</span>
+        <span class="value" style="color: var(--color-text-danger);">64</span>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Test status</div>
+      <div class="row">
+        <span class="label">Completed</span>
+        <span class="badge badge-green"><i class="ti ti-circle-check" aria-hidden="true"></i> 1,502</span>
+      </div>
+      <div class="row">
+        <span class="label">Started, not completed</span>
+        <span class="badge badge-amber"><i class="ti ti-clock" aria-hidden="true"></i> 1</span>
+      </div>
+      <div class="row">
+        <span class="label">Not started</span>
+        <span class="badge badge-red"><i class="ti ti-circle-x" aria-hidden="true"></i> 5</span>
+      </div>
+    </div>
+  </div>
+</div>
